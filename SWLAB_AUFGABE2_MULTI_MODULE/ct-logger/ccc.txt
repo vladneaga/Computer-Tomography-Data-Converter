@@ -1,0 +1,3 @@
+2023.11.24, 04:11:53 INFO: MyLoggerTest.testLogWarnText: My Information
+2023.11.24, 04:11:53 WARN: MyLoggerTest.testLogWarnText: My Warning
+2023.11.24, 04:11:53 WARN: MyLoggerTest.testLogWarnText: My Warning 2
