@@ -1,23 +1,29 @@
-The CT Converter Site is a web application that allows users to upload CT scan data, convert it between two specific formats, and download the results. The site is designed for easy use and supports both English and German languages. You can upload CT data in either .ct format or in a combination of .txt and .bin files, view the uploaded data, convert between the two formats, visualize the CT data in 3 axes, and download the converted data.
+The CT Converter Site is a web application that allows users to upload, view, convert, edit metadata, and download CT scan data in two specific formats. Designed for ease of use, the site supports both English and German languages. Users can upload their CT data in either a single .ct file or a combination of .txt and .bin files, view and edit the metadata, visualize the data in 3D across three axes, convert between formats, and download the results.
+
+All user actions, such as uploading, editing, converting, and downloading, are logged for auditing purposes.
 
 Features
-Upload CT Data: Upload CT scan data in one of the two supported formats:
+Upload CT Data: Supports two formats:
 
 Format 1: A single .ct file containing metadata and CT intensity values.
-Format 2: A .txt file for metadata and a separate .bin file for CT intensity values.
-View Data: After uploading, you can view the metadata, CT scan dimensions, and 3D visualization of the data along the X, Y, and Z axes.
+Format 2: A combination of .txt (metadata) and .bin (CT intensity values) files.
+View and Edit Metadata: After uploading, users can view the metadata (e.g., name, birthdate, weight, height) and have the option to edit this information directly in the web interface.
 
-3-Axis Visualization: View the CT data in 3 separate planes (X, Y, and Z axes), allowing a clear visualization of the image slices from each perspective.
+3-Axis Visualization: Visualize the CT scan data along the X, Y, and Z axes, showing the 3D structure of the CT slices.
 
-Convert Data: Convert between the two formats seamlessly.
+Convert Data: Seamlessly convert between the two formats:
 
-Download Converted Data: After conversion, download the results in the desired format.
+From .ct to .txt and .bin
+From .txt and .bin to .ct
+Download Converted Data: After conversion, users can download the CT data in the new format.
 
-Language Support: Switch between English and German interfaces for ease of use.
+Language Support: The interface is available in both English and German. Users can switch between languages at any time.
+
+Action Logging: All user actions, including uploads, metadata edits, conversions, and downloads, are logged for tracking and auditing purposes.
 
 File Formats
 Format 1: .ct File
-A single .ct file contains both the metadata and the CT intensity values.
+A single .ct file that contains both the metadata and the CT intensity values.
 
 Example Structure:
 
@@ -34,10 +40,10 @@ DATA
 256
 175
 <CT intensity values>
-DATA: Dimensions of the CT scan (x, y, z axes).
+DATA: Contains the dimensions of the CT scan (X, Y, Z axes).
 The intensity values follow the metadata, representing the CT data.
 Format 2: .txt and .bin Files
-In this format, the metadata and CT intensity values are stored separately.
+In this format, the metadata and CT intensity values are stored in separate files.
 
 Metadata File (.txt):
 arduino
@@ -53,30 +59,59 @@ DATA
 256
 175
 CT Intensity File (.bin):
-A binary file that contains the CT intensity values.
+A binary file that contains the actual CT intensity values.
+Sample files are available at:
+SWLAB_AUFGABE2_MULTI_MODULE/ct-converter/target/classes/sample-files
+
 Usage Instructions
 Upload CT Data:
-
-Choose whether to upload in .ct format or .txt and .bin format.
-View Uploaded Data:
-
-After uploading, the metadata, dimensions, and 3-axis visualization of the CT scan will be displayed for review.
+Choose the file format you want to upload:
+Format 1: Upload a .ct file.
+Format 2: Upload a .txt file for metadata and a .bin file for intensity values.
+View and Edit Metadata:
+After uploading, the metadata and dimensions of the CT scan are displayed. Users can edit the metadata directly in the interface, updating fields such as name, birthdate, weight, and height.
 Visualize Data:
-
-The application provides 3D visualization of the CT scan data by allowing you to view image slices along the X, Y, and Z axes separately.
+The application provides 3D visualization of the CT data, showing slices along the X, Y, and Z axes separately.
 Convert Data:
-
-Click on the Convert button to switch between the two supported formats.
+Click the Convert button to switch between the supported formats:
+.ct → .txt and .bin
+.txt and .bin → .ct
 Download Converted Data:
-
-Once converted, you can download the data in the new format.
+After converting, users can download the converted files in the newly selected format.
 Switch Language:
-
-The application supports both English and German. You can toggle the language from the top menu.
+Toggle between English and German via the language switcher in the top menu.
 Language Support
-The site supports both English and German interfaces.
-Users can switch between these languages at any time for ease of use.
+English and German are supported.
+Users can switch between languages at any time to access the interface in their preferred language.
 Technology Stack
-Frontend: HTML, CSS, JavaScript (with language toggle support).
-Backend: SprinBoot (Java)
-File Handling: Converts .ct files to .txt and .bin formats and vice versa.
+Frontend: HTML, CSS, JavaScript (support for language switching between English and German).
+Backend: Spring Boot (Java) for handling file uploads, conversions, metadata editing, and logging user actions.
+File Handling: Converts .ct files to .txt and .bin formats, and vice versa.
+3D Visualization: Visualizes the CT scan data along the X, Y, and Z axes separately.
+
+Getting Started
+Prerequisites
+Java 11+
+Maven
+Installation
+
+Clone the repository:
+git clone <repository-url>
+
+Build the project:
+mvn clean install
+
+Run the application:
+java -jar target/ct-converter-0.0.1-SNAPSHOT.jar
+
+Open your browser and go to:
+http://localhost:8080
+Logging
+All user actions are logged, including:
+File uploads
+Metadata edits
+Format conversions
+File downloads
+These logs help track system usage and ensure all activities are properly monitored.
+
+
