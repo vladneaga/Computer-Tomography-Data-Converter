@@ -27,8 +27,7 @@ A single .ct file that contains both the metadata and the CT intensity values.
 
 Example Structure:
 
-arduino
-Копировать код
+
 name    Michael Schöll
 birth   29.06.1998
 weight  103
@@ -46,8 +45,7 @@ Format 2: .txt and .bin Files
 In this format, the metadata and CT intensity values are stored in separate files.
 
 Metadata File (.txt):
-arduino
-Копировать код
+
 name    Michael Schöll
 birth   29.06.1998
 weight  103
@@ -93,10 +91,11 @@ Getting Started
 Prerequisites
 Java 11+
 Maven
+
 Installation
 
 Clone the repository:
-git clone <repository-url>
+git clone https://github.com/vladneaga/Computer-Tomography-Data-Converter.git
 
 Build the project:
 mvn clean install
