@@ -1,0 +1,19 @@
+2024.09.27, 04:15:35 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:15:37 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 04:15:38 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt1.
+2024.09.27, 04:15:40 INFO: com.group10_1.controllers.mainController.changeLanguage: User changed language to German.
+2024.09.27, 04:15:40 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:15:42 INFO: com.group10_1.controllers.mainController.changeLanguage: User changed language to German.
+2024.09.27, 04:15:42 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:15:49 INFO: com.group10_1.controllers.mainController.readMusterstadt1: User uploaded a .ct file.
+2024.09.27, 04:16:15 INFO: com.group10_1.controllers.mainController.patientDataEdit: User is editing the patient data.
+2024.09.27, 04:16:25 INFO: com.group10_1.controllers.mainController.patientDataEditCheck: Patient data edited successfully.
+2024.09.27, 04:16:25 INFO: com.group10_1.controllers.mainController.patiendData: User visits the page with patient data.
+2024.09.27, 04:17:02 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:17:10 INFO: com.group10_1.controllers.mainController.readMusterstadt1: User uploaded a .ct file.
+2024.09.27, 04:17:16 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:17:17 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 04:17:19 INFO: com.group10_1.controllers.mainController.changeLanguage: User changed language to English.
+2024.09.27, 04:17:19 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:17:21 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 04:18:24 INFO: com.group10_1.controllers.mainController.readMusterstadt2: User uploaded a .txt and .bin file.

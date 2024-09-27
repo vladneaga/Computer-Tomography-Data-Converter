@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+    </style>
+</head>
+<body>
+
+
+<nav style=" display: flex;
+    justify-content: center;
+   background-color: #f9f9f9;
+    padding: 10px;">
+    <a href="/" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerMain')}">Main</a>
+    <a href="/patientData" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerPatientData')}">PatientData</a>
+</nav>
+<form id="myForm" method="post" action="/">
+    <label for="choice"  th:text = "${bundle.get('format')}"></label>
+    <select id="choice" th:name="choice">
+        <option value="true" th:selected="${musterstadt1}">Musterstadt1</option>
+        <option value="false" th:selected="${not musterstadt1}">Musterstadt2</option>
+    </select>
+
+</form>
+
+<form th:method="POST" action="/changeLanguage" id="languageForm">
+    <select id="chooseLanguage" name="language">
+        <option value="" selected></option>
+        <option value="en" >English</option>
+        <option value="de" >German</option>
+    </select>
+</form>
+<div style="height: 50px;"></div>
+<div th:if="${musterstadt1}">
+    <h2 th:text="${bundle.get('uploadCt')}"></h2>
+    <form action="/musterstadt1" method="post" enctype="multipart/form-data">
+        <label for="ctFile" th:text="${bundle.get('chooseCt')}"></label>
+        <input type="file" id="ctFile" name="ctFile" accept=".ct" />
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
+<div th:if="${not musterstadt1}">
+    <form action="/musterstadt2" method="post" enctype="multipart/form-data">
+        <h2 th:text="${bundle.get('uploadTxtBin')}"></h2>
+
+        <label for="txtFile"th:text="${bundle.get('chooseTxt')}"></label>
+        <input type="file" id="txtFile" name="txtFile" accept=".txt" />
+        <label for="binFile" th:text="${bundle.get('chooseBin')}"></label>
+        <input type="file" id="binFile" name="binFile" accept=".bin" />
+        <button type="submit" th:text="${bundle.get('upload')}">Upload</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('choice').addEventListener('change', function() {
+        document.getElementById('myForm').submit();
+    });
+     document.getElementById('languageForm').addEventListener('change', function() {
+     if( document.getElementById('chooseLanguage').value!=='') {
+                document.getElementById('languageForm').submit();
+
+     }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°ß§‰£2J$f872ea13-0597-4543-aad1-95b6ea338e46
+	java:S112³"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°ß§‰£2J$a7dc376c-68af-48cb-8709-37004d1c6d4d
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°ß§‰£2J$d23e68b1-843d-4729-9e16-e795e9b1469b
+‘
+java:S1192†"HDefine a constant instead of duplicating this literal "patient" 7 times.(ñÃîáûÿÿÿÿ8²ß§‰£2J$cda64b03-e385-4a89-8423-fa7bec99343d
+
+java:S1192E"GDefine a constant instead of duplicating this literal "bundle" 7 times.(‚ˆ‹ºøÿÿÿÿ8²ß§‰£2J$524d2525-9544-49fb-a787-967476a88844
+
+java:S1192k"LDefine a constant instead of duplicating this literal "fileFormat1" 4 times.(ú£ú8²ß§‰£2J$cb6d1522-2260-4f3b-b44f-77ef3467a55f
+	java:S101!"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(óœºò8³ß§‰£2J$cf2ecb02-491b-4386-825f-623408958f03
+
+java:S3973ú"GUse indentation to denote the code conditionally executed by this "if".(ˆÉÌßûÿÿÿÿ8·ß§‰£2J$041a50cc-820c-4d42-9336-262b14f2abf5
+…
+java:S68131"BRemove this field injection and use constructor injection instead.(êæÄŞ8Èß§‰£2J$71985760-1a4c-4e5a-ad65-99f2cf95e7fd
+~
+java:S2696U"6Make the enclosing method "static" or remove this set.(³Ê½ßıÿÿÿÿ8Ğß§‰£2J$64e46799-3b60-4606-9f64-f9a37e482929
+y
+java:S2696W"6Make the enclosing method "static" or remove this set.(È¤¹ô8Ğß§‰£2J$9a6db078-2e3f-4d40-b575-3a84b1672fc7
+m	java:S106~"+Replace this use of System.out by a logger.(¹ãÿş8Òß§‰£2J$36241791-7e66-4e92-a098-e340d686bd22
+
+java:S2142­"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(« ó¬ùÿÿÿÿ8ïô³‰£2
+n	java:S106›"+Replace this use of System.out by a logger.(¢ºëá8Õß§‰£2J$2c4416b8-f1ff-4ca8-be2f-54be37938e9b
+n	java:S106"+Replace this use of System.out by a logger.(ìİô8Õß§‰£2J$90c09037-42ad-4461-83fe-81de3266d5ea
+’
+java:S4042"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(ìİô8Öß§‰£2J$ff4701f1-24be-485c-aa90-2aa41055d14e
+z
+java:S2696Ÿ"6Make the enclosing method "static" or remove this set.(³»æ×8Öß§‰£2J$490c2a3a-711d-4e12-ba40-270a8d0df770
+„	java:S125¤"<This block of commented-out lines of code should be removed.(¿Ù“ûÿÿÿÿÿ8Öß§‰£2J$00989603-e664-41a7-979a-7a85f9b4dfab
+n	java:S106±"+Replace this use of System.out by a logger.(âÍ¼ş8×ß§‰£2J$9ef250c2-a5db-4865-b5d2-fefafd8eb879

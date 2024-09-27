@@ -1,0 +1,30 @@
+2024.09.27, 03:56:44 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 03:56:52 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 03:56:57 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt1.
+2024.09.27, 03:56:59 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 03:57:08 ERROR: com.group10_1.controllers.mainController.readMusterstadt2: Error at file uploading.
+2024.09.27, 03:57:13 INFO: com.group10_1.controllers.mainController.readMusterstadt2: User uploaded a .txt and .bin file.
+2024.09.27, 03:57:30 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt1.
+2024.09.27, 03:57:38 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt1.
+2024.09.27, 03:57:45 INFO: com.group10_1.controllers.mainController.readMusterstadt1: User uploaded a .ct file.
+2024.09.27, 03:57:52 INFO: com.group10_1.controllers.mainController.readMusterstadt2: User uploaded a .txt and .bin file.
+2024.09.27, 03:57:59 INFO: com.group10_1.controllers.mainController.patientDataEdit: User is editing the patient data.
+2024.09.27, 03:58:05 INFO: com.group10_1.controllers.mainController.patientDataEditCheck: Patient data edited successfully.
+2024.09.27, 03:58:05 INFO: com.group10_1.controllers.mainController.patiendData: User visits the page with patient data.
+2024.09.27, 03:58:13 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 03:58:15 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt1.
+2024.09.27, 03:58:18 INFO: com.group10_1.controllers.mainController.readMusterstadt1: User uploaded a .ct file.
+2024.09.27, 03:59:04 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 03:59:06 INFO: com.group10_1.controllers.mainController.changeLanguage: User changed language to English.
+2024.09.27, 03:59:06 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 03:59:07 INFO: com.group10_1.controllers.mainController.mainPagePost: User changed format to Musterstadt2.
+2024.09.27, 03:59:46 INFO: com.group10_1.controllers.mainController.readMusterstadt2: User uploaded a .txt and .bin file.
+2024.09.27, 03:59:58 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:00:42 INFO: com.group10_1.controllers.mainController.readMusterstadt2: User uploaded a .txt and .bin file.
+2024.09.27, 04:00:51 INFO: com.group10_1.controllers.mainController.patientDataEdit: User is editing the patient data.
+2024.09.27, 04:00:52 INFO: com.group10_1.controllers.mainController.patientDataEditCheck: Patient data edited successfully.
+2024.09.27, 04:00:52 INFO: com.group10_1.controllers.mainController.patiendData: User visits the page with patient data.
+2024.09.27, 04:11:41 INFO: com.group10_1.controllers.mainController.patiendData: User visits the page with patient data.
+2024.09.27, 04:14:52 INFO: com.group10_1.controllers.mainController.patiendData: User visits the page with patient data.
+2024.09.27, 04:14:55 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.
+2024.09.27, 04:14:57 INFO: com.group10_1.controllers.mainController.mainPage: User accessed the main page.

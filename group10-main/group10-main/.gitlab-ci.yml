@@ -1,0 +1,21 @@
+stages:
+  - test
+  - build
+
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
+
+maven-test:
+  stage: test
+  image: maven:3.8-openjdk-17
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+
+maven-build:
+  stage: build
+  image: maven:3.8-openjdk-17
+  script:
+    - mvn $MAVEN_CLI_OPTS clean package shade:shade
+  artifacts:
+    paths:
+      - target/*.jar

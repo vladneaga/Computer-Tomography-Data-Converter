@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Patient Data</title>
+</head>
+<body>
+<nav style=" display: flex;
+    justify-content: center;
+background-color: #f9f9f9;
+    padding: 10px;">
+  <a href="/" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerMain')}">Main</a>
+  <a href="/patientData" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerPatientData')}">PatientData</a>
+</nav>
+<h2>Edit Patient Data</h2>
+
+<form th:action="@{/edit/check}" method="post" th:object="${patient}">
+  <label for="name" th:text="${bundle.get('name')}">Name:</label>
+  <input type="text" id="name" name="name" th:field="*{name}" th:value="${patient.name}" required />
+  <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red;"></span>
+
+  <label for="birth" th:text="${bundle.get('birth')}">Birth Date:</label>
+  <input type="text" id="birth" name="birth" th:field="*{birth}" th:value="${patient.birth}" placeholder="DD.MM.YYYY" required />
+  <span th:if="${#fields.hasErrors('birth')}" th:errors="*{birth}" style="color: red;"></span>
+
+  <label for="weight" th:text="${bundle.get('weight')}">Weight:</label>
+  <input type="text" id="weight" name="weight" th:field="*{weight}" th:value="${patient.weight}" required />
+  <span th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}" style="color: red;"></span>
+
+  <label for="height" th:text="${bundle.get('height')}">Height:</label>
+  <input type="text" id="height" name="height" th:field="*{height}" th:value="${patient.height}" required />
+  <span th:if="${#fields.hasErrors('height')}" th:errors="*{height}" style="color: red;"></span>
+
+  <label for="IZ" th:text="${bundle.get('id')}">IZ:</label>
+  <input type="text" id="IZ" name="IZ" th:field="*{IZ}" th:value="${patient.IZ}" required />
+  <span th:if="${#fields.hasErrors('IZ')}" th:errors="*{IZ}" style="color: red;"></span>
+
+  <button type="submit" th:text="${bundle.get('saveChanges')}">Save Changes</button>
+</form>
+
+</body>
+</html>

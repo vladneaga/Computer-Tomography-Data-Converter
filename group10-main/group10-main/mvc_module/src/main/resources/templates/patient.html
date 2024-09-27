@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Information</title>
+</head>
+<body>
+<nav style=" display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 10px;">
+  <a href="/" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerMain')}">Main</a>
+  <a href="/patientData" style="font-size: 1.5rem; padding: 10px; " th:text="${bundle.get('headerPatientData')}">PatientData</a>
+</nav>
+<h1 th:text="${bundle.get('patientInfo')}"></h1>
+<div th:if="${patient == null}">
+<a href="/" th:text="${bundle.get('pleaseUpload')}">
+
+</a>
+</div>
+<div th:if="${patient != null}">
+  <p><strong th:text="${bundle.get('name')}">Name:</strong> <span th:text="${patient.name}"></span></p>
+  <p><strong th:text="${bundle.get('birth')}">Birth Date:</strong> <span th:text="${patient.birth}"></span></p>
+  <p><strong th:text="${bundle.get('weight')}">Weight:</strong> <span th:text="${patient.weight}"></span></p>
+  <p><strong th:text="${bundle.get('height')}">Height:</strong> <span th:text="${patient.height}"></span></p>
+  <p><strong th:text="${bundle.get('name')}">IZ:</strong> <span th:text="${patient.IZ}"></span></p>
+
+  <canvas th:width = "${patient.getX()}" th:height="${patient.getY()}"
+  id="zCanvas">
+  </canvas>
+  <input type="range" min="0" th:max="${patient.getZ()-1}" id="intensityRange1">
+  <!-- Element to display the current value -->
+  <p><span th:text="${bundle.get('currentValueCtData')}"></span> <span id="currentValue1">0</span></p>
+
+  <!--Display y layer-->
+
+    <canvas th:width = "${patient.getX()}" th:height="${patient.getZ()}"
+            id="yCanvas">
+    </canvas>
+    <input type="range" min="0" th:max="${patient.getY()-1}" id="intensityRange2">
+    <!-- Element to display the current value -->
+    <p><span th:text="${bundle.get('currentValueCtData')}"></span> <span id="currentValue2">0</span></p>
+
+
+  <!--Display x layer-->
+  <canvas th:width = "${patient.getY()}" th:height="${patient.getZ()}"
+          id="xCanvas">
+  </canvas>
+  <input type="range" min="0" th:max="${patient.getX()-1}" id="intensityRange3">
+  <!-- Element to display the current value -->
+  <p><span th:text="${bundle.get('currentValueCtData')}"></span> <span id="currentValue3">0</span></p>
+
+<!--////////////////-->
+  <form th:action="@{/edit}" th:method="GET">
+    <button type="submit" th:text="${bundle.get('edit')}">Edit</button>
+  </form>
+
+
+    <h2 th:text="${bundle.get('saveMusterstadt1')}">Save the data in the Musterstadt1 format.</h2>
+      <a href="/downloadMusterstadt1" download th:text="${bundle.get('save')}">Save</a>
+
+    <h2 th:text="${bundle.get('saveMusterstadt2')}">Save the data in the Musterstadt2 format.</h2>
+      <a href="/downloadMusterstadt2" download th:text="${bundle.get('save')}">Save</a>
+
+
+</div>
+<div th:if="${patient != null}">
+<script th:inline="javascript">
+ var ctDataArray = /*[[${patient.getCtDataArray()}]]*/;
+var xLimit = /*[[${patient.getX()}]]*/;
+var yLimit = /*[[${patient.getY()}]]*/
+var zLimit = /*[[${patient.getZ()}]]*/;
+/////////////
+var intensityRange1 = document.getElementById('intensityRange1');
+var currentValueElement1 = document.getElementById('currentValue1');
+var zCanvas = document.getElementById('zCanvas');
+var ctz = zCanvas.getContext('2d');
+/////////////
+var intensityRange2 = document.getElementById('intensityRange2');
+var currentValueElement2 = document.getElementById('currentValue2');
+var yCanvas = document.getElementById('yCanvas');
+var cty = yCanvas.getContext('2d');
+/////////////
+var intensityRange3 = document.getElementById('intensityRange3');
+var currentValueElement3 = document.getElementById('currentValue3');
+var xCanvas = document.getElementById('xCanvas');
+var ctx = xCanvas.getContext('2d');
+/////////////
+  // Add an event listener to the input range to update the displayed value
+    intensityRange1.addEventListener('input', function() {
+    // Update the displayed value
+    currentValueElement1.textContent = intensityRange1.value;
+    ctz.clearRect(0, 0, zCanvas.width, zCanvas.height);
+    var imageData = ctDataArray[intensityRange1.value];
+    drawImageZ(ctz, imageData);
+    });
+/////////////
+    // Add an event listener to the input range to update the displayed value
+    intensityRange2.addEventListener('input', function() {
+    // Update the displayed value
+    currentValueElement2.textContent = intensityRange2.value;
+    cty.clearRect(0, 0, yCanvas.width, yCanvas.height);
+    drawImageY(cty, intensityRange2.value);
+    });
+/////////////
+ // Add an event listener to the input range to update the displayed value
+    intensityRange3.addEventListener('input', function() {
+    // Update the displayed value
+    currentValueElement3.textContent = intensityRange3.value;
+    ctx.clearRect(0, 0, xCanvas.width, xCanvas.height);
+    drawImageX(ctx, intensityRange3.value);
+    });
+/////////////
+   function drawImageZ(context, imageData) {
+        // Implement your logic to draw the image based on the intensity data
+        // This assumes imageData is a 2D array representing pixel intensities
+        for (var i = 0; i < imageData.length; i++) {
+            for (var j = 0; j < imageData[i].length; j++) {
+                // Set pixel color based on intensity (adjust this based on your actual data)
+                var intensity = imageData[i][j];
+                context.fillStyle = 'rgb(' + intensity + ',' + intensity + ',' + intensity + ')';
+
+                // Draw a pixel at (i, j)
+                context.fillRect(j, i, 1, 1);
+            }
+        }
+    }
+      function drawImageY(context, rangeValue) {
+        // Implement your logic to draw the image based on the intensity data
+
+        for (var i = 0; i < zLimit; i++) {
+            for (var j = 0; j < xLimit; j++) {
+                // Set pixel color based on intensity (adjust this based on your actual data)
+                var intensity = ctDataArray[i][rangeValue][j];
+                context.fillStyle = 'rgb(' + intensity + ',' + intensity + ',' + intensity + ')';
+
+                // Draw a pixel
+                context.fillRect(j, i, 1, 1);
+            }
+        }
+    }
+     function drawImageX(context, rangeValue) {
+        // Implement your logic to draw the image based on the intensity data
+
+        for (var i = 0; i < zLimit; i++) {
+            for (var j = 0; j < yLimit; j++) {
+                // Set pixel color based on intensity (adjust this based on your actual data)
+                var intensity = ctDataArray[i][j][rangeValue];
+                context.fillStyle = 'rgb(' + intensity + ',' + intensity + ',' + intensity + ')';
+
+                // Draw a pixel
+                context.fillRect(j, zLimit - i, 1, 1);
+            }
+        }
+    }
+
+
+</script>
+</div>
+</body>
+</html>

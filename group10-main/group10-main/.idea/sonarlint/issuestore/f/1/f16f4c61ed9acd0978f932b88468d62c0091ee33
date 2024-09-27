@@ -1,0 +1,38 @@
+
+	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İÈ—‰£2J$1b6d6b2d-4da2-4069-87e3-44a61db08aa4
+	java:S112Ô"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İÈ—‰£2J$36dfaf78-e7a4-4551-897d-67ab2761f985
+	java:S112ï"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$67ab4d00-0303-4cf0-8242-44cf0050cd46
+	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$7c332abc-3645-4f3c-9af9-3a0bf05eebe6
+	java:S112‘"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$2cefe0fb-b6ad-4c85-bad9-e11da10e302a
+	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$e16673f2-2445-43da-815a-82d34f952078
+	java:S112Æ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$428f4181-5611-4104-bd6c-455002445982
+	java:S112Ş"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$4a776f11-0e89-466b-b087-05935f55159a
+	java:S112ê"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞÈ—‰£2J$dc42da17-5f52-4349-a729-8bf1257ae4c3
+”	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( £ñ8âÈ—‰£2J$472c2208-2888-424c-800c-2956ee203266
+
+java:S1104º"YMake intensityData a static final constant or non-public and provide accessors if needed.(ƒùÈ8ãÈ—‰£2J$2ad3be3e-ff18-4de9-8f15-51c82d48e379
+	java:S101!"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ßÂõ38ãÈ—‰£2J$7c42e095-3498-4911-b660-97eaf52daa1d
+u
+java:S1199R"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8åÈ—‰£2J$749d98f7-eed6-41c2-9264-c4c0d8a27430
+u
+java:S1199b"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8æÈ—‰£2J$cf630c7c-670d-42b1-8f58-7f179b953612
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û˜Òëøÿÿÿÿ8æÈ—‰£2J$83a33bfc-6bea-4a23-a1fb-cfb03c22d1de
+Œ
+java:S5361„"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¿†õñ8ãÉ—‰£2J$da6ec2ad-eb6a-45dd-b840-dcf98d170794
+¦
+java:S4087¿"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(°ĞãÇ8èÉ—‰£2J$b13cf958-5b7a-40b4-a5d1-ed5aa4ef946e
+Œ
+java:S5361¸"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¿†õñ8êÉ—‰£2J$027cbd17-33cf-44b9-b27d-5af4f8b38aef
+«
+java:S4087Í"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(µö¹šúÿÿÿÿ8ëÉ—‰£2J$edadd314-8c90-44d9-9004-94dd3171a36e
+…
+java:S4087Î"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(–³Ëçüÿÿÿÿ8×·˜‰£2
+	java:S125Ê"<This block of commented-out lines of code should be removed.(ãÛ¿×8íÉ—‰£2J$8f7ac6d3-bd43-4576-b709-5ae5fc061013
+›
+java:S3776ã"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(È’¡Ùÿÿÿÿÿ8îÉ—‰£2J$c9ee327a-65c1-411c-a1c6-dba549d3ba69
+	java:S125À"<This block of commented-out lines of code should be removed.(ãÛ¿×8öÉ—‰£2J$55483aa9-68e9-4515-83ae-77a0a57532e2
+	java:S116¡"MRename this field "IZ" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÇ“°8ùÉ—‰£2J$ea7cbc66-32f7-45d4-996e-3ef9ae012fba
+
+java:S1450¿"ZRemove the "ctDataArray" field and declare it as a local variable in the relevant methods.(‡¼»İ8ûÉ—‰£2J$64af1e79-c83e-4d99-87c6-6c929b4d48c5
+}
+java:S2864Ì"4Iterate over the "entrySet" instead of the "keySet".(Â¾„¼ÿÿÿÿÿ8ıÉ—‰£2J$a5630606-47b4-4a08-92bc-c4ebe207c394

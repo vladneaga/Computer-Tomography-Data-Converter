@@ -1,0 +1,10 @@
+name	Mike Schöll
+birth	29.06.1998
+weight	103
+height	204
+IZ	2
+image	null
+DATA
+256
+256
+175
